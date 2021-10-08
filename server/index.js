@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(
     cors({
-        origin : ['http://meetme'], // ?
+        origin: true,
         credentials: true,
         methods: ['GET', 'POST', 'DELETE', 'OPTIONS']
     })
@@ -28,7 +28,7 @@ app.use('/photo', photoRouter);
 
 // server test code
 // app.get('/', (req, res) => {
-//     res.send('hello world.')
+//     res.status(201).send('hello world.')
 // })
 
 const port = 4000;
