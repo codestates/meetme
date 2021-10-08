@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
@@ -8,52 +8,51 @@ module.exports = {
      * Example:
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
-    queryInterface.addConstraint("user_categories", {
-      fields: ["user_id"],
-      type: "foreign key",
+    queryInterface.addConstraint('user_categories', {
+      fields: ['user_id'],
+      type: 'foreign key',
       references: {
-        table: "users",
-        field: "id",
+        table: 'users',
+        field: 'id'
       },
-      onDelete: "cascade",
-      onUpdate: "cascade",
+      onDelete: 'cascade',
+      onUpdate: 'cascade'
     });
 
-    queryInterface.addConstraint("user_categories", {
-      fields: ["category_id"],
-      type: "foreign key",
+    queryInterface.addConstraint('user_categories', {
+      fields: ['category_id'],
+      type: 'foreign key',
       references: {
-        table: "categories",
-        field: "id",
+        table: 'categories',
+        field: 'id'
       },
-      onDelete: "cascade",
-      onUpdate: "cascade",
+      onDelete: 'cascade',
+      onUpdate: 'cascade'
     });
 
     
-    queryInterface.addConstraint("category_tags", {
-      fields: ["category_id"],
-      type: "foreign key",
+    queryInterface.addConstraint('category_tags', {
+      fields: ['category_id'],
+      type: 'foreign key',
       references: {
-        table: "categories",
-        field: "id",
+        table: 'categories',
+        field: 'id'
       },
-      onDelete: "cascade",
-      onUpdate: "cascade",
+      onDelete: 'cascade',
+      onUpdate: 'cascade'
     });
 
-    queryInterface.addConstraint("category_tags", {
-      fields: ["tag_id"],
-      type: "foreign key",
+    queryInterface.addConstraint('category_tags', {
+      fields: ['tag_id'],
+      type: 'foreign key',
       references: {
-        table: "tags",
-        field: "id",
+        table: 'tags',
+        field: 'id'
       },
-      onDelete: "cascade",
-      onUpdate: "cascade",
+      onDelete: 'cascade',
+      onUpdate: 'cascade'
     });
   },
-
   down: async (queryInterface, Sequelize) => {
     /**
      * Add reverting commands here.

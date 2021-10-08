@@ -1,4 +1,4 @@
-const db = require("../../../models");
+const db = require('../../../models');
 
 module.exports = async (req, res) => {
   const tokenData = isAuthorized(req);
@@ -9,17 +9,17 @@ module.exports = async (req, res) => {
       profile_image: null,
     },
     {
-      where: { email: email },
+      where: { email: email }
     }
   );
 
   const user = db.user.findOne({
-    where: { email: email },
+    where: { email: email }
   });
 
   res.status(200).json({
     email: user.email,
     filepath: user.profile_image,
-    message: "photo has been deleted",
+    message: 'photo has been deleted'
   });
 };
