@@ -1,5 +1,5 @@
-const databaseConnector = require('../../lib/databaseConnector');
-const db = new databaseConnector();
+const DatabaseConnector = require('../../lib/databaseConnector');
+const db = new DatabaseConnector();
 db.init();
 
 const path = require('../../helpers/path');

@@ -1,5 +1,5 @@
-const databaseConnector = require('../../lib/databaseConnector');
-const db = new databaseConnector();
+const DatabaseConnector = require('../../lib/databaseConnector');
+const db = new DatabaseConnector();
 db.init();
 
 module.exports = async (req, res) => {
