@@ -1,3 +1,12 @@
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 a:-webkit-any-link {
   text-decoration: none;
   color: inherit;
@@ -47,4 +56,3 @@ a:-webkit-any-link {
   color:#fff;
   background-color: #037334;
 }
-
