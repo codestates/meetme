@@ -10,7 +10,7 @@
 >> Frontend
 
 > #### 김양현
->> Frontend ⇀ Backend
+>> Backend ⇀ Frontend
 
 > #### 권용현
 >> Backend ⇀ Frontend
