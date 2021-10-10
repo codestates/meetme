@@ -5,10 +5,8 @@ db.init();
 const path = require('../../helpers/path');
 
 module.exports = async (req, res) => {
-  // const tokenData = isAuthorized(req);
-  // const { email } = tokenData;
-
-  const email = 'hello@gmail.com';
+  const tokenData = isAuthorized(req);
+  const { email } = tokenData;
 
   const sql = `update user set profile_image = '${path.imagePath}'
                where email = '${db.escape(email)}'`;
