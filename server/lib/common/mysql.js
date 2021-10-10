@@ -74,9 +74,9 @@ module.exports = class DatabaseConnector extends SingletonBase {
     });
   }
 
-  escape(str) {
+  escape(value) {
     return new Promise((resolve) => {
-      this.connection.escape(str, function (error, results) {
+      this.connection.escape(value, function (error, results) {
         if (error) throw error;
 
         resolve(results);
