@@ -9,7 +9,7 @@
     "react-scripts": "^3.4.3"
   },
   "scripts": {
-    "start": "HTTPS=true SSL_CRT_FILE=FILL_ME_IN SSL_KEY_FILE=FILL_ME_IN react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build"
   },
   "eslintConfig": {
