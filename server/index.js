@@ -3,6 +3,7 @@ const http = require('http');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 
+const { profile, profileByTag } = require('./controllers/person/profile');
 const controllers = require('./controllers');
 
 const express = require('express');
@@ -20,8 +21,8 @@ app.use(
 )
 app.use(cookieParser());
 
-app.get('/user/profile', controllers.profile);
-app.get('/user/profile/:tagName', controllers.profile);
+app.get('/user/profile', profile);
+app.get('/user/profile/:tagName', profileByTag);
 app.post('/photo/deleteimage', controllers.deleteImage);
 app.post('/photo/upload', controllers.upload);
 app.delete('/user/close', controllers.close);
