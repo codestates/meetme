@@ -1,0 +1,38 @@
+.nav-container{
+  position:absolute;
+  left:0;
+  top:0;
+  right:0;
+  height:100px;
+  z-index: 1;
+  line-height:100px;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  padding:0 15%;
+}
+
+.nav-logo{
+  margin-top:20px;
+  letter-spacing: 0.5rem;
+}
+
+.nav-mypage{
+  width:90px;
+  height:90px;
+  background-color: #037334;  
+  border-radius: 50px;
+  border: none;
+  letter-spacing: 0.3rem;
+  padding-left:2px;
+  color:#fff;
+  border:3px solid #037334;
+  margin-top:30%;
+}
+
+.nav-mypage:hover{
+  animation: rotate 7.5s linear infinite;
+  cursor:pointer;
+}
