@@ -66,3 +66,7 @@
   cursor:pointer;
   background-color: #fff;
 }
+
+.email-err-txt {
+  color: red;
+}
