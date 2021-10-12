@@ -12,22 +12,29 @@ function Signup() {
       mobile: ''
   });
   const history = useHistory();
+  const { password, repassword } = userinfo;
 
   // 이미 등록된 이메일인지 확인하는 메세지 
   const [ emailErrMsg, setEmailErrMsg ] = useState('');
   
   // 비밀번호와 리비밀번호와 동일 여부 확인
   const isPWDSuccess = password === repassword;
+
   // 비밀번호와 리비밀번호 일치
   const pwdSuccessMsg = isPWDSuccess
                 ? 'pwd-txt pwd-success-txt' // 비밀번호가 일치하다는 메시지를 보임
                 : 'pwd-txt pwd-success-txt hide' // 비밀번호가 일치하다는 메시지를 숨김
 
   // 비밀번호와 리비밀번호 불일치
-  const pwdFailMsg = !isPWSuccess
+  let pwdFailMsg = !isPWDSuccess
                 ? 'pwd-txt pwd-fail-txt' // 비밀번호가 불일치하다는 메시지를 보임
                 : 'pwd-txt pwd-fail-txt hide' // // 비밀번호가 불일치하다는 메시지를 숨김
-
+  
+  // 리비밀번호에 아무것도 입력되지 않았다면
+  // 어떤 메세지도 보이지 않음
+  if(repassword.length === 0) {
+    pwdFailMsg = 'pwd-txt hide'
+  }
     // 비밀번호 유효성 검사에 따른 메세지
   // 8~16자 영문 대 소문자, 숫자, 특수문자를 사용
   const regExp = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/;
