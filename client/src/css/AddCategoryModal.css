@@ -1,0 +1,42 @@
+.addCategoryModalSection{
+  width:100%;
+  height:100%;
+  background-color: #fff;
+  position: absolute;
+  padding-top:35vh;
+  top:0;
+  left:0;
+}
+
+.addCategoryModalContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.addCategoryModalText{
+  font-size:28px;
+  margin-bottom:30px;
+}
+
+.addCategoryModalInput{
+  width:260px;
+  height:50px;
+  border:3px solid #037334;
+  border-radius:15px;
+  padding:0 20px;
+  letter-spacing: 0.1em;
+  font-size:16px;
+  margin:10px 0 40px 0;
+}
+
+.addCategoryModalBtn{
+  cursor: pointer;
+  font-size:16px;
+  width:60px;
+  height:40px;
+  border-radius:12px;
+  border:3px solid #037334;
+  background-color: #037334;
+  color:#fff;
+}
