@@ -67,6 +67,16 @@
   background-color: #fff;
 }
 
+.hide {
+  display: none;
+}
+
 .email-err-txt {
+  color: red;
+}
+.pwd-success-txt {
+  color: green;
+}
+.pwd-fail-txt {
   color: red;
 }
