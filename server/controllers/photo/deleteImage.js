@@ -11,11 +11,11 @@ module.exports = async (req, res) => {
   const sql = `update user set profile_image = '${path.imagePath}'
                where email = '${db.escape(email)}'`;
   await db.query(sql);
-  db.terminate();
 
   const sql2 = `select * from user
                 where email = '${db.escape(email)}'`;
   const user = await db.query(sql2);
+  
   db.terminate();
 
   res.status(200).json({
