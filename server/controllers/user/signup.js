@@ -15,6 +15,7 @@ module.exports = async (req, res) => {
     const sql = `select * from user
                  where email = '${db.escape(email)}', '${db.escape(password)}'`;
     const user = await db.query(sql);
+
     db.terminate();
 
     if (user) {
@@ -23,10 +24,10 @@ module.exports = async (req, res) => {
     } else {
         const sql2 = `insert into user email, password, username, profile_image, role, createdAt, updatedAt
                       values ('${db.escape(email)}', '${db.escape(password)}', '${eb.escape(email)}', '${path.imagePath}', '${role.user}', now(), now())`;
-
         await db.query(sql2);
+
         db.terminate();
 
-        res.status(201).json();
+        res.status(201).json({});
     }
 };
