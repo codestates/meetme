@@ -6,6 +6,8 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import UsersList from './pages/UsersList';
 import UsersListByTag from './pages/UsersListByTag';
+import Category from './pages/Category';
+import Mypage from './pages/Mypage';
 
 function App() {
   return (
@@ -20,8 +22,15 @@ function App() {
         <Route path='/signup'>
           <Signup />
         </Route>
+
         <Route path='/person/profile/' component={UsersList} />
         <Route path='/person/profile/:tagName' component={UsersListByTag} />
+        <Route path='/category'>
+          <Category />
+        </Route>
+        <Route path='/mypage'>
+          <Mypage />
+        </Route>
       </Switch>
     </BrowserRouter>
   );
