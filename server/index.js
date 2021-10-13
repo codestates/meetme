@@ -3,9 +3,8 @@ const http = require('http');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 
-const userRouter = require('./routers/UserRouter');
-const personRouter = require('./routers/PersonRouter');
-const photoRouter = require('./routers/PhotoRouter');
+const { profile, profileByTag } = require('./controllers/person/profile');
+const controllers = require('./controllers');
 
 const express = require('express');
 const app = express();
@@ -22,9 +21,12 @@ app.use(
 )
 app.use(cookieParser());
 
-app.use('/user', userRouter);
-app.use('/person', personRouter);
-app.use('/photo', photoRouter);
+app.get('/user/profile', profile);
+app.get('/user/profile/:tagName', profileByTag);
+app.post('/photo/deleteimage', controllers.deleteImage);
+app.post('/photo/upload', controllers.upload);
+app.delete('/user/close', controllers.close);
+app.get('/user/userinfo', controllers.userInfo);
 
 // server test code
 // app.get('/', (req, res) => {
