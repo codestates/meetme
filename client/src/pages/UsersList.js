@@ -3,7 +3,7 @@ import { customAxios } from '../utils/cutomAxios';
 import '../css/UserList.css';
 
 import Nav from '../components/Nav';
-import Landing from '../pages/Landing';
+import Loading from '../components/Loading';
 import PersonInfoCard from '../components/PersonInfoCard';
 
 function UsersList({ handleLoading, isLoading}) {
@@ -44,7 +44,7 @@ function UsersList({ handleLoading, isLoading}) {
   return (
     <div>
       {isLoading ? (
-      <Landing />
+      <Loading />
       ) : (
       <section class='pserson-list-container'>
         <Nav />
