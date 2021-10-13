@@ -1,14 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../css/Login.css';
-import Nav from '../components/Nav'
 
 
 function Login() {
 
   return (
     <div className="login-wrap">
-      <Nav/>
       <div className='login-container'>
         <h3>Login</h3>
           <form id='form'>
@@ -24,7 +22,7 @@ function Login() {
           </form>
         
         <div className='login-buttons'>
-          <Link to='/'>
+          <Link to='/category'>
             <button className='submit-btn'>Login</button>
           </Link>
           <button className='google-btn'>

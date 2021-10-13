@@ -7,7 +7,7 @@ function Header() {
     <div className='nav-container'>
       <nav>
         <div className='nav-logo'><Link to='/'>meetme</Link></div>
-          <Link to='/mypage'>
+          <Link to='/user/info'>
             <button className='nav-mypage'>mypage</button>
           </Link>
       </nav>

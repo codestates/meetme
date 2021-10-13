@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import '../css/Signup.css';
-import Nav from '../components/Nav'
+import axios from 'axios';
 
 function Signup() {
   const [ userinfo, setuserinfo] = useState({
@@ -83,7 +83,6 @@ function Signup() {
 
   return (
     <div className="signup-wrap">
-      <Nav/>
       <div className='signup-container'>
         <h3>Signup</h3>
           <form onSubmit={(e) => e.preventDefault()} id='form'>

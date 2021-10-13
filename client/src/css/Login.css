@@ -1,6 +1,7 @@
 .login-wrap{
   display: flex;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 .login-container {
@@ -10,11 +11,11 @@
   align-items: center;
   margin-top: 15%;
   width:300px;
-  height: 100%;
+  height: 390px;
   color: rgb(34, 34, 34);
   border-radius: 20px;
   border: 3px solid #037334;
-  padding:50px 50px 30px 50px;
+  padding:50px 50px 24px 50px;
 }
 
 .login-container h3{
@@ -59,8 +60,6 @@
   border-radius: 13px;
   margin-bottom:20px;
 }
-
-/* google로그인창으로 가는거.. onclick event ...  */
 
 .submit-btn:hover {
   color:#000;
