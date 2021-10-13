@@ -5,32 +5,49 @@ import '../css/UserList.css';
 import Nav from '../components/Nav';
 import Landing from '../pages/Landing';
 import PersonInfoCard from '../components/PersonInfoCard';
+import PersonInfoModal from '../components/PersonInfoModal';
 
 function UsersList({ handleLoading, isLoading}) {
 
+  console.log("render start 랜더링");
   handleLoading(true);
 
   // 모든 사용자의 정보를 관리
   const [personList, setPersonList] = useState([])
+    // 모든 유저리스트에서 20명의 데이터만 추출한다
+  // 이 20명만 화면에 보이도록한다.
+  const [ personInfo, setPersonInfo ] = useState({
+    email: '',
+    category: '',
+    tag: '',
+    profilepath: ''
+  })
 
-  // 사용자 수를 제한하여 리스트를 담을 변수
-  let slicedUsersList;
+  const personInfoHandler = (person) => {
+    setPersonInfo(person);
+  }
+  
+  const [isOpen, setIsOpen] = useState(false);
+  
+  let openModalHandler = () => {
+    setIsOpen(!isOpen);
+    console.log(isOpen);
+  };
 
-  // 서버에 axios요청을 하여, 모든 사용자 목록을 불러온다.
+  let slicedUsersList; // ? personList가 배열로써 관리되고 있는가?
+
   useEffect(async () => {
 
     await customAxios
     .get('/person/profile')
     .then(res => {
-      // (인증이 되었다면)
-      // 받은 데이터를 personList에 넣는다.
-      const usersList = res.data.users;
-
+      // 인증이 되었다면
+      // 받은 데이터를 personList에 넣어
+      // personList의 상태를 변경하기 (로그아웃이 된다면 상태는 자동으로 공백이 되는 것일까?)
+      const usersList = res.data.users; 
       setPersonList(usersList);
       handleLoading(false);
-
-      // 결과값 중 20명만 축출한다.
-      slicedUsersList= personList.slice(0, 20); 
+      slicedUsersList= personList.slice(0, 20);
     })
     .catch(err => {
       console.log('에러가 발생한 이유: ' + err)
@@ -48,7 +65,22 @@ function UsersList({ handleLoading, isLoading}) {
       ) : (
       <section class='pserson-list-container'>
         <Nav />
-        <div>{slicedUsersList.map((person) => <PersonInfoCard person={person}/> )}</div>
+        <div>
+          {slicedUsersList.map((person, idx) => {
+          return (<PersonInfoCard
+            key={idx}
+            person={person}
+            personInfoHandler={personInfoHandler}
+            setIsOpen={setIsOpen}
+            openModalHandler={openModalHandler}
+          /> )})}
+        </div>
+        {isOpen ? (
+          <PersonInfoModal
+            person={personInfo}
+            openModalHandler={openModalHandler}
+          />
+        ) : null}
       </section>
      )}
     </div>
