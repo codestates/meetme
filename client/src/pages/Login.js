@@ -1,12 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../css/Login.css';
+import Nav from '../components/Nav'
+
 
 
 function Login() {
 
   return (
     <div className="login-wrap">
+      <Nav/>
       <div className='login-container'>
         <h3>Login</h3>
           <form id='form'>
