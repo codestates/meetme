@@ -3,6 +3,5 @@ module.exports = {
     upload: require('./photo/upload'),
     close: require('./user/close'),
     userInfo: require('./user/userInfo'),
-    category: require('./category/category'),
-    tag: require('./category/tag')
+    category_tag: require('./category/category_tag'),
 } 

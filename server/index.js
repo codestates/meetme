@@ -27,8 +27,7 @@ app.post('/photo/deleteimage', controllers.deleteImage);
 app.post('/photo/upload', controllers.upload);
 app.delete('/user/close', controllers.close);
 app.get('/user/userinfo', controllers.userInfo);
-app.post('/category', controllers.category)
-app.post('/category/tag', controllers.tag)
+app.post('/category', controllers.category_tag);
 
 // server test code
 // app.get('/', (req, res) => {
