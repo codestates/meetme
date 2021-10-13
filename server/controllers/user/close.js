@@ -11,6 +11,7 @@ module.exports = async (req, res) => {
     const sql = `delete from user
                  where email = '${db.escape(_user[0].email)}' and password = '${db.escape(_user[0].password)}'`;
     await db.query(sql);
+    
     db.terminate();
 
     res.status(200).json({
