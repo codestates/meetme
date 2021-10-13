@@ -43,7 +43,7 @@ module.exports = class DatabaseConnector extends SingletonBase {
         }
         resolve('ok');
       });
-    });
+    }).catch((error) => {});
   }
 
   terminate() {
@@ -61,7 +61,7 @@ module.exports = class DatabaseConnector extends SingletonBase {
         delete this.connection;
         resolve('ok');
       });
-    });
+    }).catch((error) => {});
   }
 
   query(sql) {
