@@ -3,11 +3,11 @@ const db = new DatabaseConnector();
 db.init();
 
 module.exports = async (req, res) => {
-  // 쿠키에서 정보를 빼오는 작업
+  const { username, password, categoryName, tagName } = req.body;
+
   const getUser = `select id, email from user
                    where email = '${db.escape(email)}'`;
 
-  const { username, password, categoryName, tagName } = req.body;
   if (username) {
     const sql = `update user set username = '${db.escape(username)}'
                  where email = '${db.escape(email)}'`;
