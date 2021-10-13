@@ -75,14 +75,14 @@ module.exports = async (req, res) => {
       await db.query(sql4);
       db.terminate();
 
-      const sql4 = `update category_tag set category_id = ${category[0].insertedId}, tag_id = ${tag[0].insertedId}
+      const sql5 = `update category_tag set category_id = ${category[0].insertedId}, tag_id = ${tag[0].insertedId}
                     where user_id = ${db.escape(user[0].id)}`;
-      await db.query(sql4);
+      await db.query(sql5);
       db.terminate();
 
-      const sql5 = `insert into category_tag category_id, tag_id, createdAt, updatedAt
+      const sql6 = `insert into category_tag category_id, tag_id, createdAt, updatedAt
                     values (${category[0].insertedId}, ${tag[0].insertedId}, now(), now())`;
-      await db.query(sql5);
+      await db.query(sql6);
       db.terminate();
     }
   } else {
