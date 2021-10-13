@@ -52,11 +52,12 @@
 .edit-mypage-user{
   border-radius: 13px;
   border:2px solid #037334;
-  width:170px;
+  width:150px;
   height:40px;
   line-height: 40px;
-  font-size: 16px;
-  text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+  padding-left:20px;
   margin:10px;
   letter-spacing: 1px;
 }
