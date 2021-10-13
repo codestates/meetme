@@ -9,6 +9,7 @@ module.exports = async (req, res) => {
     const sql = `select * from user
                  where email = '${email}' and '${password}'`;
     const user = await db.query(sql);
+    
     db.terminate();
 
     if (user) {
