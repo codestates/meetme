@@ -6,11 +6,11 @@ function AddCategoryModal({ addCategoryModal, setAddCategoryModal }) {
   return (
     <>
       {addCategoryModal ?
-      <section className='addCategoryModalSection'>
-          <div className='addCategoryModalContainer'>
-          <p className='addCategoryModalText'>관심사를 적어주세요.</p>
-          <input type='text' placeholder='예시) 영화' className='addCategoryModalInput'></input>
-          <button className='addCategoryModalBtn' onClick={ () => setAddCategoryModal(!addCategoryModal) }>추가</button>
+      <section className='add-category-modal-section'>
+          <div className='add-category-modal-container'>
+          <p className='add-category-modal-text'>관심있는 항목을 추가해주세요.</p>
+          <input type='text' placeholder='예시) 영화' className='add-category-modal-input'></input>
+          <button className='add-category-modal-btn' onClick={ () => setAddCategoryModal(!addCategoryModal) }>추가</button>
         </div>
         </section> :
         null}
