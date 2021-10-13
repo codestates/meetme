@@ -1,0 +1,72 @@
+.edit-mypage-section{
+  margin-top:20vh;
+}
+
+.edit-mypage-container{
+  border:3px solid #037334;
+  margin:0 auto;
+  width:500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  padding:30px 0;
+}
+
+.edit-mypage-img-btn{
+  margin:10px 0;
+  width:170px;
+  height:42px;
+  border-radius: 11px;
+  background-color: #037334;
+  border:none;
+  color:#fff;
+}
+
+.edit-mypage-image{
+  width:120px;
+  height:120px;
+  border:3px solid #037334;
+  line-height: 120px;
+  border-radius: 100px;
+  margin-bottom:20px;
+  text-align: center;
+  position:relative;
+  font-size: 18px;
+}
+
+.edit-mypage-image::before{
+  border-radius: 100px;
+  background-color: #037334;
+  content: "";
+  background-image: url('../../src/image.png');
+  background-size: 115%;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  opacity:0.5;
+}
+
+.edit-mypage-user{
+  border-radius: 13px;
+  border:2px solid #037334;
+  width:170px;
+  height:40px;
+  line-height: 40px;
+  font-size: 16px;
+  text-align: center;
+  margin:10px;
+  letter-spacing: 1px;
+}
+
+.edit-mypage-bottom-btn{
+  margin:30px 0;
+  width:170px;
+  height:42px;
+  border-radius: 11px;
+  background-color: #037334;
+  border:none;
+  color:#fff;
+}
