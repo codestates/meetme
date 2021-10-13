@@ -1,4 +1,4 @@
-.tagModalSection{
+.tag-modal-section{
   width:100%;
   height:100%;
   background-color: #fff;
@@ -8,18 +8,19 @@
   left:0;
 }
 
-.tagModalContainer{
+.tag-modal-container{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.tagModalText{
-  font-size:28px;
+.tag-modal-text{
+  letter-spacing: 1px;
+  font-size:24px;
   margin-bottom:30px;
 }
 
-.tagModalInput{
+.tag-modal-input{
   width:260px;
   height:50px;
   border:3px solid #037334;
@@ -30,13 +31,18 @@
   margin:10px 0 40px 0;
 }
 
-.tagModalBtn{
+.tag-modal-btn{
   cursor: pointer;
-  font-size:16px;
+  font-size:14px;
   width:60px;
   height:40px;
   border-radius:12px;
   border:3px solid #037334;
   background-color: #037334;
   color:#fff;
+  transition: all .2s ease-in-out;
+}
+
+.tag-modal-btn:hover{
+  transform: scale(0.95);
 }

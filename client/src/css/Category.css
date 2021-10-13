@@ -9,8 +9,9 @@
 }
 
 .category-txt{
-  font-size: 28px;
+  font-size: 24px;
   margin-bottom:30px;
+  letter-spacing: 1px;
 }
 .category-tags{
   text-align: center;
@@ -18,7 +19,19 @@
 }
 
 .category-tag{
-  font-size: 16px;
+  font-size: 14px;
+  margin: 13px;
+  padding: 0rem 1rem;
+  height:40px;
+  border:2px solid #037334;
+  text-align: center;
+  line-height: 36px;
+  border-radius:13px;
+  background-color: #fff;
+}
+
+.category-selected-tag{
+  font-size: 14px;
   margin: 13px;
   padding: 0rem 1rem;
   height:40px;
@@ -26,7 +39,8 @@
   text-align: center;
   line-height: 40px;
   border-radius:13px;
-  background-color: #fff;
+  background-color: #037334;
+  color: #fff;
 }
 
 .category-tag:hover{
@@ -38,7 +52,7 @@
 }
 
 .category-buttons{
-  padding:20px;
+  padding:5px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,17 +77,19 @@
 }
 
 .category-submit-btn{
-  font-size:16px;
+  margin-top:20px;
+  font-size:14px;
   width:150px;
   height:45px;
   border-radius:12px;
+  color:#fff;
   border:3px solid #037334;
-  background-color: #fff;
+  background-color: #037334;
 }
 
 .category-submit-btn:hover{
-  color:#fff;
-  background-color: #037334;
+  color:#000;
+  background-color: #fff;
   cursor:pointer;
-  
+
 }
