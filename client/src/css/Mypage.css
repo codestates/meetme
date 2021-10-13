@@ -14,8 +14,8 @@
 }
 
 .mypage-image{
-  width:110px;
-  height:110px;
+  width:120px;
+  height:120px;
   border:3px solid #037334;
   line-height: 110px;
   border-radius: 100px;
@@ -23,22 +23,20 @@
   text-align: center;
   background-color:#037334;
   background-image: url('../../src/image.png');
-  background-size: 110%
+  background-size: 115%
 }
 
 
 .mypage-user{
-  color: rgb(56, 55, 55);
-  width:200px;
+  width:170px;
   height:40px;
   border-radius:11px;
-  border:1px solid;
+  border:2px solid #037334;
   line-height: 40px;
-  font-size: 14px;
-  font-weight: 300;
+  font-size: 16px;
   margin:10px;
-  padding-left:20px;
   letter-spacing: 1px;
+  text-align: center;
 }
 
 .mypage-tags{
@@ -90,6 +88,11 @@
   height:40px;
   border-radius: 11px;
   background-color: #037334;
-  border:none;
+  border:3px solid #037334;
   color:#fff;
+}
+
+.mypage-bottom-btn:hover{
+  color:#000;
+  background-color: #fff;
 }
