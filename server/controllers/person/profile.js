@@ -14,10 +14,11 @@ module.exports = {
                  left join tag
                  on category_tag.tag_id = tag.id`;
 
-    const _user = await db.query(sql);
+    const user = await db.query(sql);
+
     db.terminate();
 
-    res.status(200).json({ users: _user });
+    res.status(200).json({ users: user });
   },
   profileByTag: async (req, res) => {
     const sql = `select user.username, user.email, user.profile_image, category.name, tag.name from user
@@ -31,9 +32,10 @@ module.exports = {
                  on category_tag.tag_id = tag.id
                  where tag.name = ${db.escape(req.body.tagName)}`;
 
-    const _user = await db.query(sql);
+    const user = await db.query(sql);
+
     db.terminate();
 
-    res.statsu(200).json({ users: _user });
+    res.statsu(200).json({ users: user });
   }
 };
