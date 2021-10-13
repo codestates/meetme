@@ -11,7 +11,24 @@ function UserListByTag({ tagName, handleLoading, isLoading}) {
     handleLoading(true);
 
     const [personListByTag, setPersonListByTag] = useState([]);
-
+    
+    const [ personInfo, setPersonInfo ] = useState({
+      email: '',
+      category: '',
+      tag: '',
+      profilepath: ''
+    })
+  
+    const personInfoHandler = (person) => {
+      setPersonInfo(person);
+    }
+    
+    const [isOpen, setIsOpen] = useState(false);
+    
+    let openModalHandler = () => {
+      setIsOpen(!isOpen);
+      console.log(isOpen);
+    };
     // 사용자 수를 제한하여 리스트를 담을 변수
     let slicedUsersList; 
 
@@ -40,12 +57,26 @@ function UserListByTag({ tagName, handleLoading, isLoading}) {
   return (
     <div>
       {isLoading ? (
-      <Loading />
+      <Landing />
       ) : (
       <section class='pserson-list-container'>
         <Nav />
-        <h1>{tagName}</h1>
-        {slicedUsersList.map((person) => <PersonInfoCard person={person}/> )}
+        <div>
+          {slicedUsersList.map((person, idx) => {
+          return (<PersonInfoCard
+            key={idx}
+            person={person}
+            personInfoHandler={personInfoHandler}
+            setIsOpen={setIsOpen}
+            openModalHandler={openModalHandler}
+          /> )})}
+        </div>
+        {isOpen ? (
+          <PersonInfoModal
+            person={personInfo}
+            openModalHandler={openModalHandler}
+          />
+        ) : null}
       </section>
      )}
     </div>
