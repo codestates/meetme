@@ -4,6 +4,7 @@ import '../css/Login.css';
 import Nav from '../components/Nav'
 
 
+
 function Login() {
 
   return (
@@ -24,7 +25,7 @@ function Login() {
           </form>
         
         <div className='login-buttons'>
-          <Link to='/'>
+          <Link to='/category'>
             <button className='submit-btn'>Login</button>
           </Link>
           <button className='google-btn'>
