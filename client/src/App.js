@@ -8,6 +8,7 @@ import UsersList from './pages/UsersList';
 import UsersListByTag from './pages/UsersListByTag';
 import Category from './pages/Category';
 import Mypage from './pages/Mypage';
+import EditMypage from './pages/EditMypage'
 
 function App() {
   return (
@@ -28,8 +29,11 @@ function App() {
         <Route path='/category'>
           <Category />
         </Route>
-        <Route path='/mypage'>
+        <Route path='/user/info'>
           <Mypage />
+        </Route>
+        <Route path='/user/userinfo'>
+          <EditMypage />
         </Route>
       </Switch>
     </BrowserRouter>

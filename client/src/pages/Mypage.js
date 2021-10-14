@@ -16,7 +16,6 @@ function Mypage() {
       <div className='mypage-container'>
         <div className='mypage-image'></div>
         <div className='mypage-user'>Username</div>
-        <div className="mypage-user">Password</div>
         <div className="mypage-tags">
           {myPageTags.map(tag => (
             <div className='mypage-tag-wrapper'>
@@ -24,12 +23,9 @@ function Mypage() {
               <Link to='/tagfriend'><button className='mypage-tag'>{Object.values(tag)}</button></Link>
             </div>
           ))}
-          {/* <button className='mypageTagEdit'>관심사 수정하기</button> */}
         </div>
         <div className='mypage-bottom'>
-          <Link to='/usermodal'>
-          <button className='mypage-bottom-btn'>Edit</button>
-          </Link>
+          <Link to='/user/userinfo'><button className='mypage-bottom-btn'>Edit</button></Link>
           <button className='mypage-bottom-btn'>Logout</button>
         </div>
       </div>
