@@ -1,0 +1,98 @@
+.mypage-section{
+  margin-top:20vh;
+}
+
+.mypage-container{
+  border:3px solid #037334;
+  margin:0 auto;
+  width:500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  padding:30px 0;
+}
+
+.mypage-image{
+  width:120px;
+  height:120px;
+  border:3px solid #037334;
+  line-height: 110px;
+  border-radius: 100px;
+  margin-bottom:20px;
+  text-align: center;
+  background-color:#037334;
+  background-image: url('../../src/image.png');
+  background-size: 115%
+}
+
+
+.mypage-user{
+  width:170px;
+  height:40px;
+  border-radius:11px;
+  border:2px solid #037334;
+  line-height: 40px;
+  font-size: 16px;
+  margin:10px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.mypage-tags{
+  width:340px;
+  font-size:14px;
+  margin:8px;
+  border-radius: 15px;
+  padding:10px;
+  text-align: center;
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.mypage-tag-wrapper{
+  padding:14px;
+}
+
+.mypage-category{
+  display: inline-block;
+  padding: 6px 10px;
+  border:1px solid #037334;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.mypage-tag{
+  display: inline-flex;
+  padding: 7px 10px 6px 10px;
+  background-color: #037334;
+  color:#fff;
+  border:1px solid #037334;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;  
+}
+
+.mypage-tag:hover{
+  cursor: pointer;
+}
+
+.mypage-bottom{
+  margin:10px 0;
+  width:300px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.mypage-bottom-btn{
+  width:120px;
+  height:40px;
+  border-radius: 11px;
+  background-color: #037334;
+  border:3px solid #037334;
+  color:#fff;
+}
+
+.mypage-bottom-btn:hover{
+  color:#000;
+  background-color: #fff;
+}
