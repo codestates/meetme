@@ -13,7 +13,7 @@
 >> Backend ⇀ Frontend
 
 > #### 권용현
->> Backend ⇀ Frontend
+>> Backend
 
 # Development
 ### Frontend Stack
