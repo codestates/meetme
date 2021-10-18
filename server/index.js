@@ -21,16 +21,16 @@ app.use(
 )
 app.use(cookieParser());
 
-app.get('/user/profile', profile);
-app.get('/user/profile/:tagName', profileByTag);
+app.get('/person/profile', profile);
+app.get('/person/profile/:tagName', profileByTag);
 app.post('/photo/deleteimage', controllers.deleteImage);
 app.post('/photo/upload', controllers.upload);
 app.delete('/user/close', controllers.close);
 app.get('/user/userinfo', controllers.userInfo);
 app.post('/category', controllers.category_tag);
-app.post('/login', controllers.login);
-app.post('/logout', controllers.logout);
-app.post('/signup', controllers.signup);
+app.post('/user/login', controllers.login);
+app.post('/user/logout', controllers.logout);
+app.post('/user/signup', controllers.signup);
 
 // server test code
 // app.get('/', (req, res) => {
